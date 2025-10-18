@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Highrise Flow | مرکز فرماندهی معاملات گیمینگ ⚡</title>
+    <meta name="description" content="خرید گلد هایرایز، کالاف و پابجی و خدمات واسطه‌گری با طراحی مدرن و امن‌ترین در روبیکا.">
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-FD/Vazirmatn-FD-Regular.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* --- متغیرهای تم گیمینگ --- */
+        :root {
+            --color-primary: #00ffc8; /* نئون آبی/سبز (گلد) */
+            --color-secondary: #ff3366; /* نئون قرمز/صورتی (واسطه) */
+            --color-background: #0d0d0d; /* پس‌زمینه بسیار تیره */
+            --color-surface: #1a1a1a; /* رنگ کارت‌ها */
+            --color-text: #e0e0e0; 
+            --color-glow-primary: 0 0 12px rgba(0, 255, 200, 0.8), 0 0 25px rgba(0, 255, 200, 0.4); 
+            --color-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: 'Vazirmatn FD', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+            text-align: right;
+            background-image: radial-gradient(#202020 1px, transparent 1px);
+            background-size: 40px 40px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: var(--color-surface);
+            border-radius: 15px;
+            box-shadow: var(--color-shadow);
+            border: 2px solid var(--color-primary);
+        }
+
+        /* --- Header --- */
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+
+        header h1 {
+            color: var(--color-primary);
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 900;
+            text-shadow: var(--color-glow-primary); /* جلوه نئون اصلی */
+            letter-spacing: 3px;
+        }
+        
+        header p {
+            color: #b0b0b0;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        /* --- Sections --- */
+        .section {
+            padding: 35px 0;
+            border-bottom: 1px dashed #333;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: var(--color-text);
+            margin-bottom: 25px;
+            border-right: 5px solid var(--color-secondary);
+            padding-right: 15px;
+            font-weight: 700;
+            text-shadow: 0 0 5px rgba(255, 51, 102, 0.3);
+        }
+
+        /* --- Price Table --- */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #252525;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .price-table th, .price-table td {
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .price-table th {
+            background-color: #2a2a2a;
+            color: var(--color-primary);
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+
+        /* --- Action Buttons (Call to Action) --- */
+        .action-button {
+            display: block;
+            width: 100%;
+            padding: 22px;
+            margin: 30px 0 15px 0;
+            color: var(--color-background);
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.4em;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-weight: 900;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .buy-gold-button {
+            background-color: var(--color-primary);
+            text-shadow: 0 0 3px #000;
+        }
+
+        .buy-gold-button:hover {
+            background-color: #00e5b0;
+            box-shadow: var(--color-glow-primary);
+            transform: translateY(-3px);
+        }
+        
+        .mediation-button {
+            background-color: var(--color-secondary);
+            text-shadow: 0 0 3px #000;
+        }
+        
+        .mediation-button:hover {
+            background-color: #e6305a;
+            box-shadow: 0 0 12px var(--color-secondary), 0 0 25px rgba(255, 51, 102, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* --- Lists --- */
+        .list-group {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .list-group li {
+            background: #2a2a2a;
+            padding: 10px 18px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .list-group a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* --- Mediation Rates --- */
+        .mediation-rates p {
+            background-color: #333; 
+            border-right: 5px solid var(--color-secondary);
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            color: var(--color-text);
+        }
+        
+        .alert-text {
+            color: var(--color-secondary);
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+            font-size: 1.05em;
+        }
+        
+        footer {
+            text-align: center;
+            padding-top: 25px;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 0.9em;
+            color: #616161;
+        }
+        
+        /* Responsive */
+        @media (max-width: 650px) {
+            .container {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2.8em;
+            }
+            .action-button {
+                font-size: 1.2em;
+                padding: 18px;
+            }
+            .price-table th, .price-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+    
+    <script>
+        // --- ⚙️ تنظیمات آیدی‌های روبینو ---
+        const sellerAdmins = [ 'Silly_reza', 'Mamd_o10', 'Flani_sale_admin' ];
+        const mediationAdmins = [ 'Silly_reza', 'Mamd_o10', 'Vaset_Flow' ];
+        // --- ⚙️ پایان تنظیمات ---
+
+        // تابع رندوم ادمین
+        function redirectToRandomAdmin(type) {
+            let adminList = (type === 'gold') ? sellerAdmins : mediationAdmins;
+            const linkPrefix = "https://rubika.ir/"; 
+
+            // پیام هشدار قبل از هدایت
+            if (type === 'gold') {
+                alert("توجه: شما به صفحه روبینوی یکی از ادمین‌های فروش هدایت می‌شوید. لطفا در اولین پیام، درخواست خرید خود (مقدار گلد) را کامل بنویسید.");
+            } else {
+                alert("توجه: شما به صفحه روبینوی یکی از ادمین‌های واسطه‌گری هدایت می‌شوید. لطفا در اولین پیام، درخواست واسطه‌گری را اعلام کنید.");
+            }
+
+            if (adminList.length > 0) {
+                const randomIndex = Math.floor(Math.random() * adminList.length);
+                const selectedAdmin = adminList[randomIndex];
+                const rubikaLink = `${linkPrefix}${selectedAdmin}`;
+                window.location.href = rubikaLink;
+            } else {
+                alert("در حال حاضر ادمینی برای ارتباط موجود نیست. لطفا از طریق گروه روبیکا اقدام کنید.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Highrise Flow</h1>
+            <p>مرکز فرماندهی معاملات گیمینگ: گلد، واسطه، امنیت</p>
+        </header>
+
+        <div class="section">
+            <h2>💰 خرید گلد (Gold Purchase)</h2>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>مقدار گلد</th>
+                        <th>قیمت (تومان)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>100 گلد</td><td>25,000</td></tr>
+                    <tr><td>500 گلد</td><td>125,000</td></tr>
+                    <tr><td>1,000 گلد (1K)</td><td>250,000</td></tr>
+                    <tr><td>5,000 گلد (5K)</td><td>1,250,000</td></tr>
+                </tbody>
+            </table>
+            
+            <a href="javascript:void(0);" onclick="redirectToRandomAdmin('gold')" class="action-button buy-gold-button">
+                🚀 خرید فوری گلد (اتصال به ادمین فروش) 🚀
+            </a>
+            
+            <span class="alert-text">قیمت‌ها لحظه‌ای هستند. قبل از واریز، حتماً از ادمین استعلام بگیرید.</span>
+        </div>
+        
+        <div class="section">
+            <h2>🛡️ واسطه‌گری امن (Middleman Service)</h2>
+            <p style="color: #b0b0b0;">انجام کلیه معاملات اکانت و آیتم‌های درون بازی با کمترین کارمزد.</p>
+            
+            <h3>نرخ کارمزد (Commission):</h3>
+            <div class="mediation-rates">
+                <p><strong>معامله زیر 1 میلیون:</strong> 25,000 تومان</p>
+                <p><strong>معامله 1 تا 5 میلیون:</strong> 40,000 تومان</p>
+                <p><strong>معامله بالای 5 تا 10 میلیون:</strong> 80,000 تومان</p>
+            </div>
+            
+            <a href="javascript:void(0);" onclick="redirectToRandomAdmin('mediation')" class="action-button mediation-button">
+                🔗 درخواست واسطه‌گری (اتصال به واسطه) 🔗
+            </a>
+            
+            <span class="alert-text">⚠️ حق واسطه در صورت لغو معامله، بازگشت داده نخواهد شد.</span>
+
+            <h3>آیدی‌های روبینوی واسطه‌های رسمی:</h3>
+            <ul class="list-group">
+                <li><a href="https://rubika.ir/Silly_reza">@Silly_reza</a></li>
+                <li><a href="https://rubika.ir/Mamd_o10">@Mamd_o10</a></li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🌐 ارتباطات فرماندهی</h2>
+            
+            <ul class="list-group">
+                <li>کانال اخبار: <a href="https://rubika.ir/HighriseFlowChannel">@HighriseFlowChannel</a></li>
+                <li>گروه چت اصلی: <a href="https://rubika.ir/joing/EEFEIBHD0LLTXPLWBABYSOCEPFALOAMV">Flow Gap Group</a></li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>توسعه و میزبانی بر روی GitHub Pages | Highrise Flow &copy; 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
